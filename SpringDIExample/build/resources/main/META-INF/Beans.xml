@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- Definition for textEditor bean using inner bean -->
+    <bean id="simpleExample" class="com.spinningnoodle.examples.springdi.SimpleExample">
+        <property name="connectionPool">
+            <bean id="connectionPool" class="com.spinningnoodle.examples.springdi.AdvancedConnectionPool"/>
+        </property>
+    </bean>
+</beans>
